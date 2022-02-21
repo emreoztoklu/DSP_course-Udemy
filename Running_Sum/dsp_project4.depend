@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1645210937 source:d:\dsp_cource\Running_Sum\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1645299025 source:d:\dsp_cource\Running_Sum\waveforms.c
+
+1645299025 source:d:\dsp_cource\running_sum\waveforms.c
+

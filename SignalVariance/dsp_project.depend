@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1645210141 source:d:\dsp_cource\signalvariance\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1533547554 source:d:\dsp_cource\signalvariance\waveforms.c
+

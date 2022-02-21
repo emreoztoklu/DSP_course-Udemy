@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1645208464 source:d:\dsp_cource\signal_mean\waveforms.c
+
+1645209087 source:c:\users\arge12\desktop\dsp_cource\signal_mean\main.c
+	<stdio.h>
+	<stdlib.h>
+

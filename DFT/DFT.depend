@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1645522738 source:c:\users\arge12\desktop\dsp_cource\dft\waveforms.c
+
+1645536936 source:c:\users\arge12\desktop\dsp_cource\dft\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

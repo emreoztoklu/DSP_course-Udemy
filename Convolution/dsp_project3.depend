@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1645210178 source:d:\dsp_cource\Convolution\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1533547554 source:d:\dsp_cource\Convolution\waveforms.c
+
+1645299025 source:d:\dsp_cource\convolution\waveforms.c
+
+1645210937 source:d:\dsp_cource\convolution\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
