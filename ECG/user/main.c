@@ -31,11 +31,11 @@ int main(){
     sig_calc_idft((double*)Output_IDFT, (double*)Output_ReX, (double*)Output_ImX, (size_t) SIG_LENGHT);
 
 
-    fptr1 = fopen("input_signal.dat", "w");
-    fptr2 = fopen("output_rex.dat"  , "w");
-    fptr3 = fopen("output_imx.dat"  , "w");
-    fptr4 = fopen("output_mag.dat"  , "w");
-    fptr5 = fopen("output_idf.dat"  , "w");
+    fptr1 = fopen("\\data\\inpu_signal.dat", "w");
+    fptr2 = fopen("\\data\\output_rex.dat"  , "w");
+    fptr3 = fopen("\\data\\output_imx.dat"  , "w");
+    fptr4 = fopen("\\data\\output_mag.dat"  , "w");
+    fptr5 = fopen("\\data\\output_idf.dat"  , "w");
 
 
     for(int i = 0; i < SIG_LENGHT; i++){
@@ -109,8 +109,8 @@ void sig_calc_idft(double* idft_out_arr, double* sig_src_rex_arr, double* sig_sr
 
     for(k = 0; k < (idft_lenght/2) ; k++){
         for(i = 0; i < idft_lenght; i++){
-            idft_out_arr[i] += sig_src_rex_arr[k]*cos(2 * PI * k * i/ idft_lenght);
-            idft_out_arr[i] += sig_src_imx_arr[k]*sin(2 * PI * k * i/ idft_lenght);
+            idft_out_arr[i] += sig_src_rex_arr[k] * cos(2 * PI * k * i/ idft_lenght);
+            idft_out_arr[i] += sig_src_imx_arr[k] * sin(2 * PI * k * i/ idft_lenght);
         }
     }
 }

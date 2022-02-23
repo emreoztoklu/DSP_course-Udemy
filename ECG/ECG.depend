@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1645522500 source:c:\users\arge12\desktop\dsp_cource\ecg\waveforms.c
+
+1645535039 source:c:\users\arge12\desktop\dsp_cource\ecg\user\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1645522738 source:c:\users\arge12\desktop\dsp_cource\ecg\user\waveforms.c
+
+1645590400 source:f:\emre_dökümanlar\dsp\dsp_course-udemy\ecg\user\waveforms.c
+
