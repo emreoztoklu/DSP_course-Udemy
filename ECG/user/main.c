@@ -5,41 +5,47 @@
 #include <math.h>
 
 /*DEFINES */
-#define SIG_LENGHT  320
+#define SIG_LENGHT  640
 #define PI		    3.141592653589
 
 /*data types*/
-extern  double InputSignal_f32_1kHz_15kHz[SIG_LENGHT];
+extern double InputSignal_f32_1kHz_15kHz[320];  //#define SIG_LENGHT  320
+extern double _640_points_ecg_[SIG_LENGHT];            //#define SIG_LENGHT  640
 
-double Output_ReX[SIG_LENGHT/2];
-double Output_ImX[SIG_LENGHT/2];
-double Output_MAG[SIG_LENGHT/2];
-double Output_IDFT[SIG_LENGHT];
+double Output_ReX   [SIG_LENGHT/2];
+double Output_ImX   [SIG_LENGHT/2];
+double Output_MAG   [SIG_LENGHT/2];
+double Output_IDFT  [SIG_LENGHT];
+
+//double *InputSignal_ptr = (double*)&InputSignal_f32_1kHz_15kHz;
+double *InputSignal_ptr = (double*)&_640_points_ecg_;
 
 
 /*function prototypes*/
-void calc_sig_dft(double *sig_src_arr, double *sig_dest_rex_arr, double *sig_dest_imx_arr, size_t sig_lenght);
-void get_dft_output_mag(double* sig_dest_mag_arr);
-void sig_calc_idft(double* idft_out_arr, double* sig_src_rex_arr, double* sig_src_imx_arr,size_t idft_lenght);
+void    calc_sig_dft        (double* sig_src_arr,  double* sig_dest_rex_arr, double* sig_dest_imx_arr, size_t sig_lenght);
+void    sig_calc_idft       (double* idft_out_arr, double* sig_src_rex_arr,  double* sig_src_imx_arr,  size_t idft_lenght);
+void    get_dft_output_mag  (double* sig_dest_mag_arr);
+
+
 
 int main(){
 
     FILE *fptr1, *fptr2, *fptr3, *fptr4, *fptr5;
 
-    calc_sig_dft((double*)InputSignal_f32_1kHz_15kHz, (double*)Output_ReX, (double*)Output_ImX, (size_t) SIG_LENGHT);
+    calc_sig_dft((double*)InputSignal_ptr, (double*)Output_ReX, (double*)Output_ImX, (size_t) SIG_LENGHT);
     get_dft_output_mag((double*)Output_MAG);
     sig_calc_idft((double*)Output_IDFT, (double*)Output_ReX, (double*)Output_ImX, (size_t) SIG_LENGHT);
 
 
-    fptr1 = fopen("\\data\\inpu_signal.dat", "w");
-    fptr2 = fopen("\\data\\output_rex.dat"  , "w");
-    fptr3 = fopen("\\data\\output_imx.dat"  , "w");
-    fptr4 = fopen("\\data\\output_mag.dat"  , "w");
-    fptr5 = fopen("\\data\\output_idf.dat"  , "w");
+    fptr1 = fopen(".\\data\\input_signal.dat", "w");
+    fptr2 = fopen(".\\data\\output_rex.dat"  , "w");
+    fptr3 = fopen(".\\data\\output_imx.dat"  , "w");
+    fptr4 = fopen(".\\data\\output_mag.dat"  , "w");
+    fptr5 = fopen(".\\data\\output_idft.dat"  , "w");
 
 
     for(int i = 0; i < SIG_LENGHT; i++){
-        fprintf(fptr1, "\n%f",InputSignal_f32_1kHz_15kHz[i]);
+        fprintf(fptr1, "\n%f",InputSignal_ptr[i]);
         fprintf(fptr5, "\n%f",Output_IDFT[i]);
     }
 
@@ -73,14 +79,17 @@ void calc_sig_dft(double *sig_src_arr, double *sig_dest_rex_arr, double *sig_des
 
     for ( k = 0 ; k < (sig_lenght / 2); k++){
         for( i = 0; i < (sig_lenght); i++){
-            sig_dest_rex_arr[k] = sig_dest_rex_arr[k] + sig_src_arr[i] * cos(2 * PI * k * i / sig_lenght);
-            sig_dest_imx_arr[k] = sig_dest_imx_arr[k] - sig_src_arr[i] * sin(2 * PI * k * i / sig_lenght);
+            sig_dest_rex_arr[k] += sig_src_arr[i] * cos(2 * PI * k * i / sig_lenght);
+            sig_dest_imx_arr[k] -= sig_src_arr[i] * sin(2 * PI * k * i / sig_lenght);
         }
     }
 }
 
 
-/*Magnitude*/
+/*
+    DFT output signal's Magnitude
+    Identifying the frequencies present in the DFT plot
+*/
 void get_dft_output_mag(double* sig_dest_mag_arr){
     int k;
     for(k = 0; k < SIG_LENGHT/2; k++){
