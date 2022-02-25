@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1645590400 source:f:\dsp\dsp_course-udemy\test1\main.c
+	<stdio.h>
+	<stdlib.h>
+

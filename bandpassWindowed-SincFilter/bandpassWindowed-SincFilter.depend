@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1646220883 source:f:\dsp\dsp_course-udemy\bandpasswindowed-sincfilter\user\waveforms.c
+
+1646296537 source:f:\dsp\dsp_course-udemy\bandpasswindowed-sincfilter\user\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

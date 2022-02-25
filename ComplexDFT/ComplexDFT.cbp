@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Rect2Polar" />
+		<Option title="ComplexDFT" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/Rect2Polar" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/ComplexDFT" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/Rect2Polar" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/ComplexDFT" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,17 +31,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Rect2Polar.depend" />
-		<Unit filename="bin/Debug/Rect2Polar.exe" />
-		<Unit filename="data/_ecg_320.txt" />
-		<Unit filename="data/input_imx.dat" />
-		<Unit filename="data/input_rex.dat" />
-		<Unit filename="data/output_mag.dat" />
-		<Unit filename="data/output_ph.dat" />
-		<Unit filename="data/view_of_signals.png" />
-		<Unit filename="obj/Debug/main.o" />
-		<Unit filename="obj/Debug/user/main.o" />
-		<Unit filename="obj/Debug/user/waveforms.o" />
+		<Unit filename="ComplexDFT.depend" />
+		<Unit filename="data/_20hz_sig.txt" />
+		<Unit filename="data/_20hz_sig.zip" />
 		<Unit filename="readme.md" />
 		<Unit filename="user/main.c">
 			<Option compilerVar="CC" />
