@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="data/input_signal.dat" />
+		<Unit filename="data/output_kernel.dat" />
+		<Unit filename="data/output_signal.dat" />
+		<Unit filename="data/signals.png" />
 		<Unit filename="user/main.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -32,8 +32,13 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="ComplexDFT.depend" />
+		<Unit filename="bin/Debug/ComplexDFT.exe" />
 		<Unit filename="data/_20hz_sig.txt" />
 		<Unit filename="data/_20hz_sig.zip" />
+		<Unit filename="data/input_imx.dat" />
+		<Unit filename="data/input_rex.dat" />
+		<Unit filename="data/output_imx.dat" />
+		<Unit filename="data/output_rex.dat" />
 		<Unit filename="readme.md" />
 		<Unit filename="user/main.c">
 			<Option compilerVar="CC" />

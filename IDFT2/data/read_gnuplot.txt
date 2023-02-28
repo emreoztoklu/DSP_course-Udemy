@@ -1,0 +1,2 @@
+cd 'D:\2_Projects\DSP_course-Udemy\IDFT2\data'  
+gnuplot> plot 'output_idft.dat' with lines lc rgb 'red'
